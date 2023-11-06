@@ -1,10 +1,9 @@
-Proof of concept of accessing local files using Streamlit and Pyinstaller.
+Streamlit + Pyinstaller 
 
-(If there is an easier way to do it please let me know)
+Unfortunately pyinstaller extracts all entire application source files to %localappdata%/Temp which is not ideal.
 
-- See https://github.com/whitphx/stlite#limitations
-- Electron uses Emscripten, an in-memory file server to store files. Hence, written files do not persist after closing the app if Javascript is not used. See https://pyodide.org/en/stable/usage/file-system.html
-- Accessing the internet: https://github.com/whitphx/stlite#example-2-pyodidehttppyfetch
+Stlite packages to Electron but has some limitations at the moment for my use case if I don't touch the Javascript eg [accessing the internet](https://github.com/whitphx/stlite#example-2-pyodidehttppyfetch) or [having files persist](https://pyodide.org/en/stable/usage/file-system.html).
+
 
 Following tutorial by @charlesmyu at https://discuss.streamlit.io/t/using-pyinstaller-or-similar-to-create-an-executable/902/73
 1. Copy whole application, including any `./pages` into `./application`
