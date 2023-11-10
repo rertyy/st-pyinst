@@ -1,3 +1,4 @@
+shiv: shiv -p '/usr/bin/env python3' -o app.pyz -e app.main:main . -r requirements.txt
 Streamlit + Pyinstaller 
 
 Unfortunately pyinstaller extracts all entire application source files to %localappdata%/Temp which is not ideal.
